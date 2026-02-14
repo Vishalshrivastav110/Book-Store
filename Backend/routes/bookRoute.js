@@ -2,15 +2,15 @@ const express = require("express");
 const router = express.Router();
 
 const {
-  getAllBooks,
+  getBooks,
   getBookById,
   createBook,
   updateBook,
   deleteBook,
 } = require("../controller/bookControllers");
 
-// GET all books
-router.get("/", getAllBooks);
+// GET all books (supports optional search query)
+router.get("/", getBooks);
 
 // GET single book by ID
 router.get("/:id", getBookById);
